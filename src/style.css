@@ -1,0 +1,45 @@
+:root {
+  --green: #00FF57;
+}
+
+body {
+  color: white;
+  background-color: black;
+  font-family: 'Fira Code', monospace;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cover {
+  width: 100%;
+  max-width: 800px;
+}
+
+.cover-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  padding: 1rem;
+}
+
+section h1 {
+  padding-left: 10px;
+  border-left: 2px solid var(--green);
+}
+
+span {
+  color: var(--green);
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  color: var(--green);
+  text-decoration: underline var(--green);
+}
