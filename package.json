@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@loglib/tracker": "^0.4.3",
     "astro": "^2.9.6"
   }
 }
