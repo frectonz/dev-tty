@@ -1,233 +1,185 @@
 ---
 import "../style.css";
+import Layout from "../layouts/index.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>/dev/tty</title>
-    <link rel="icon" href="/favicon.png" type="image/png" />
+<Layout title="/dev/tty">
+  <section id="introduction">
+    <h1>
+      <a href="#introduction">
+        Introducing the <span>dev/tty</span> prize <br /> Unleash Your CLI/TUI Creations!
+      </a>
+    </h1>
+    <p>
+      Are you a coding virtuoso with a passion for crafting powerful
+      <a href="https://en.wikipedia.org/wiki/Command-line_interface"
+        >Command Line Interface (CLI)</a
+      > or
+      <a href="https://en.wikipedia.org/wiki/Text-based_user_interface">
+        Text User Interface (TUI)
+      </a>
+      applications? Do you believe that the command line can be a canvas for artful
+      and efficient user experiences? Well, good the dev/tty prize is exactly what
+      you want.
+    </p>
+  </section>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
-    />
+  <section id="what-is-it">
+    <h1>
+      <a href="#what-is-it">
+        What is the <span>dev/tty</span> prize?
+      </a>
+    </h1>
+    <p>
+      The dev/tty prize is a competition that invites developers of all
+      backgrounds and skill levels to showcase their talent by creating cool
+      CLI/TUI applications. The challenge is simple: Design and build an
+      outstanding application that harnesses the power of the terminal to
+      deliver an exceptional user experience. From utilities to productivity
+      tools, make whatever you want.
+    </p>
+  </section>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="The /dev/tty Prize" />
-    <meta
-      property="og:description"
-      content="A competition for making a great CLI/TUI application with any language you want."
-    />
-    <meta property="og:url" content="https://tty.frectonz.io/" />
-    <meta property="og:image" content="https://tty.frectonz.io/cover.png" />
-    <meta property="og:image:type" content="image/png" />
+  <section id="why-participate">
+    <h1>
+      <a href="#why-participate"> Why Participate?</a>
+    </h1>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@frectonz" />
-    <meta name="twitter:title" content="The /dev/tty Prize" />
-    <meta
-      name="twitter:description"
-      content="A competition for making a great CLI/TUI application with any language you want."
-    />
-    <meta name="twitter:image" content="https://tty.frectonz.io/cover.png" />
+    <ul>
+      <li>
+        <span>Showcase Your Skills</span>: Demonstrate your coding prowess by
+        crafting an impressive CLI/TUI application that highlights your
+        abilities and creativity.
+      </li>
+      <li>
+        <span>Win Prizes</span>: There will be <span>3 winners</span>, two of
+        them will receive <span>2000 ETB</span>
+        and one will receive <span>1000 ETB</span>.
+      </li>
+      <li>
+        <span>Grow in the Community</span>: Connect with like-minded developers,
+        share knowledge, and engage in valuable discussions around CLI/TUI
+        development.
+      </li>
+    </ul>
+  </section>
 
-    <script>
-      import { loglib } from "@loglib/tracker";
-      loglib.record({
-        id: "tty_frectonz",
-        consent: "granted",
-        host: "https://loglib.io",
-      });
-    </script>
-  </head>
-  <body>
-    <div class="cover-container">
-      <img class="cover" src="/cover.svg" />
-    </div>
+  <section id="rules">
+    <h1>
+      <a href="#rules"> Rules and Guidelines</a>
+    </h1>
 
-    <section id="introduction">
-      <h1>
-        <a href="#introduction">
-          Introducing the <span>dev/tty</span> prize <br /> Unleash Your CLI/TUI
-          Creations!
-        </a>
-      </h1>
-      <p>
-        Are you a coding virtuoso with a passion for crafting powerful
-        <a href="https://en.wikipedia.org/wiki/Command-line_interface"
-          >Command Line Interface (CLI)</a
-        > or
-        <a href="https://en.wikipedia.org/wiki/Text-based_user_interface">
-          Text User Interface (TUI)
-        </a>
-        applications? Do you believe that the command line can be a canvas for artful
-        and efficient user experiences? Well, good the dev/tty prize is exactly what
-        you want.
-      </p>
-    </section>
+    <ul>
+      <li>
+        <span>Originality Requirement</span>: All submissions must be original
+        work created by the participant. Plagiarism is strictly prohibited and
+        may lead to disqualification. Don't take some project you found
+        somewhere on the internet and present it as your own.
+      </li>
+      <li>
+        <span>No Teams</span>: All entries must be the original work of a single
+        participant. This rule is implemented to provide a level playing field
+        for all contestants and to encourage individual creativity, innovation,
+        and problem-solving skills.
+      </li>
+      <li>
+        <span>Code Submission</span>: All participants must submit their CLI/TUI
+        application code exclusively through GitHub. However, we understand that
+        certain circumstances may arise where participants face challenges in
+        uploading their code to GitHub. In such exceptional cases, we may
+        consider making exceptions on a case-by-case basis.
+      </li>
+      <li>
+        <span>No Restrictions</span>: Anyone with an interest in developing
+        CLI/TUI apps can apply.
+      </li>
+    </ul>
+  </section>
 
-    <section id="what-is-it">
-      <h1>
-        <a href="#what-is-it">
-          What is the <span>dev/tty</span> prize?
-        </a>
-      </h1>
-      <p>
-        The dev/tty prize is a competition that invites developers of all
-        backgrounds and skill levels to showcase their talent by creating cool
-        CLI/TUI applications. The challenge is simple: Design and build an
-        outstanding application that harnesses the power of the terminal to
-        deliver an exceptional user experience. From utilities to productivity
-        tools, make whatever you want.
-      </p>
-    </section>
+  <section id="judging">
+    <h1>
+      <a href="#judging">Judging Criteria</a>
+    </h1>
 
-    <section id="why-participate">
-      <h1>
-        <a href="#why-participate"> Why Participate?</a>
-      </h1>
+    <p>
+      The submissions for the dev/tty prize will be evaluated based on the
+      following criteria by the sole judge, <a href="https://frectonz.io/"
+        >frectonz</a
+      >.
+    </p>
 
-      <ul>
-        <li>
-          <span>Showcase Your Skills</span>: Demonstrate your coding prowess by
-          crafting an impressive CLI/TUI application that highlights your
-          abilities and creativity.
-        </li>
-        <li>
-          <span>Win Prizes</span>: There will be <span>3 winners</span>, two of
-          them will receive <span>2000 ETB</span>
-          and one will receive <span>1000 ETB</span>.
-        </li>
-        <li>
-          <span>Grow in the Community</span>: Connect with like-minded
-          developers, share knowledge, and engage in valuable discussions around
-          CLI/TUI development.
-        </li>
-      </ul>
-    </section>
+    <ul>
+      <li>
+        <span>Features</span>: The breadth and depth of features implemented in
+        the CLI/TUI application will be examined. A diverse range of
+        functionalities and innovative capabilities will be favorably
+        acknowledged.
+      </li>
 
-    <section id="rules">
-      <h1>
-        <a href="#rules"> Rules and Guidelines</a>
-      </h1>
+      <li>
+        <span>Code Quality</span>: The overall quality of the CLI/TUI
+        application's codebase will be assessed, looking for well-structured,
+        readable, and maintainable code. Attention to best practices, efficient
+        algorithms, and elegant solutions will be considered.
+      </li>
 
-      <ul>
-        <li>
-          <span>Originality Requirement</span>: All submissions must be original
-          work created by the participant. Plagiarism is strictly prohibited and
-          may lead to disqualification. Don't take some project you found
-          somewhere on the internet and present it as your own.
-        </li>
-        <li>
-          <span>No Teams</span>: All entries must be the original work of a
-          single participant. This rule is implemented to provide a level
-          playing field for all contestants and to encourage individual
-          creativity, innovation, and problem-solving skills.
-        </li>
-        <li>
-          <span>Code Submission</span>: All participants must submit their
-          CLI/TUI application code exclusively through GitHub. However, we
-          understand that certain circumstances may arise where participants
-          face challenges in uploading their code to GitHub. In such exceptional
-          cases, we may consider making exceptions on a case-by-case basis.
-        </li>
-        <li>
-          <span>No Restrictions</span>: Anyone with an interest in developing
-          CLI/TUI apps can apply.
-        </li>
-      </ul>
-    </section>
+      <li>
+        <span>Difficulty of the Task</span>: The complexity and challenge of the
+        task undertaken by the participant will be evaluated. Projects that
+        tackle ambitious and demanding tasks will be recognized.
+      </li>
 
-    <section id="judging">
-      <h1>
-        <a href="#judging">Judging Criteria</a>
-      </h1>
+      <li>
+        <span>Aesthetics of the Output</span>: The visual and interactive appeal
+        of the program's output will be taken into account. Attention to design,
+        clarity, and user-friendly interfaces will be appreciated.
+      </li>
+    </ul>
+  </section>
 
-      <p>
-        The submissions for the dev/tty prize will be evaluated based on the
-        following criteria by the sole judge, <a href="https://frectonz.io/"
-          >frectonz</a
-        >.
-      </p>
+  <section id="dates">
+    <h1>
+      <a href="#dates">Important Dates</a>
+    </h1>
+    <ul>
+      <li>
+        <span>Competition Launch</span>: Sunday, July 30, 2023
+      </li>
+      <li>
+        <span>Submissions Open</span>: Wednesday, August 2, 2023
+      </li>
+      <li>
+        <span>Submission Deadline</span>: Friday, August 4, 2023
+      </li>
+      <li>
+        <span>Judging Period</span>: Saturday, August 5, 2023 - Sunday, August
+        6, 2023
+      </li>
+      <li>
+        <span>Winners Announcement</span>: Sunday, August 6, 2023
+      </li>
+    </ul>
+  </section>
 
-      <ul>
-        <li>
-          <span>Features</span>: The breadth and depth of features implemented
-          in the CLI/TUI application will be examined. A diverse range of
-          functionalities and innovative capabilities will be favorably
-          acknowledged.
-        </li>
+  <section id="resources">
+    <h1>
+      <a href="#resources">Resources</a>
+    </h1>
+    <ul>
+      <li>
+        <a href="https://clig.dev/"> Command Line Interface Guidelines</a>
+      </li>
+    </ul>
+  </section>
 
-        <li>
-          <span>Code Quality</span>: The overall quality of the CLI/TUI
-          application's codebase will be assessed, looking for well-structured,
-          readable, and maintainable code. Attention to best practices,
-          efficient algorithms, and elegant solutions will be considered.
-        </li>
+  <section id="announcements">
+    <h1>
+      <a href="#announcements">Announcements</a>
+    </h1>
 
-        <li>
-          <span>Difficulty of the Task</span>: The complexity and challenge of
-          the task undertaken by the participant will be evaluated. Projects
-          that tackle ambitious and demanding tasks will be recognized.
-        </li>
-
-        <li>
-          <span>Aesthetics of the Output</span>: The visual and interactive
-          appeal of the program's output will be taken into account. Attention
-          to design, clarity, and user-friendly interfaces will be appreciated.
-        </li>
-      </ul>
-    </section>
-
-    <section id="dates">
-      <h1>
-        <a href="#dates">Important Dates</a>
-      </h1>
-      <ul>
-        <li>
-          <span>Competition Launch</span>: Sunday, July 30, 2023
-        </li>
-        <li>
-          <span>Submissions Open</span>: Wednesday, August 2, 2023
-        </li>
-        <li>
-          <span>Submission Deadline</span>: Friday, August 4, 2023
-        </li>
-        <li>
-          <span>Judging Period</span>: Saturday, August 5, 2023 - Sunday, August
-          6, 2023
-        </li>
-        <li>
-          <span>Winners Announcement</span>: Sunday, August 6, 2023
-        </li>
-      </ul>
-    </section>
-
-    <section id="resources">
-      <h1>
-        <a href="#resources">Resources</a>
-      </h1>
-      <ul>
-        <li>
-          <a href="https://clig.dev/"> Command Line Interface Guidelines</a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="announcements">
-      <h1>
-        <a href="#announcements">Announcements</a>
-      </h1>
-
-      <p>
-        To hear about any updates or changes to the schedule subscribe to the
-        telegram channel <a href="https://t.me/thefrectonz">@thefrectonz</a>.
-      </p>
-    </section>
-  </body>
-</html>
+    <p>
+      To hear about any updates or changes to the schedule subscribe to the
+      telegram channel <a href="https://t.me/thefrectonz">@thefrectonz</a>.
+    </p>
+  </section>
+</Layout>

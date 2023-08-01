@@ -1,0 +1,57 @@
+---
+import "../style.css";
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <link rel="icon" href="/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The /dev/tty Prize" />
+    <meta
+      property="og:description"
+      content="A competition for making a great CLI/TUI application with any language you want."
+    />
+    <meta property="og:url" content="https://tty.frectonz.io/" />
+    <meta property="og:image" content="https://tty.frectonz.io/cover.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@frectonz" />
+    <meta name="twitter:title" content="The /dev/tty Prize" />
+    <meta
+      name="twitter:description"
+      content="A competition for making a great CLI/TUI application with any language you want."
+    />
+    <meta name="twitter:image" content="https://tty.frectonz.io/cover.png" />
+
+    <script>
+      import { loglib } from "@loglib/tracker";
+      loglib.record({
+        id: "tty_frectonz",
+        consent: "granted",
+        host: "https://loglib.io",
+      });
+    </script>
+  </head>
+  <body>
+    <div class="cover-container">
+      <img class="cover" src="/cover.svg" />
+    </div>
+
+    <slot />
+  </body>
+</html>
