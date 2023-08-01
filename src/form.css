@@ -1,0 +1,32 @@
+form {
+  width: 100%;
+}
+
+form>div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+form input,
+form textarea {
+  border: none;
+  background-color: transparent;
+
+  color: white;
+  padding: 0.5rem;
+  border: 1px solid var(--green);
+
+  resize: vertical;
+}
+
+form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--green);
+
+  cursor: pointer;
+}

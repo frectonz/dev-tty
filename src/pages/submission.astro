@@ -1,10 +1,73 @@
 ---
-import "../style.css";
+import "../form.css";
 import Layout from "../layouts/index.astro";
 ---
 
-<Layout title="/dev/tty">
+<Layout title="/dev/tty - Project Submission">
   <section>
     <h1>Submit your Project</h1>
+    <form>
+      <div>
+        <label for="participant-name">Your Name</label>
+        <input
+          autofocus
+          id="participant-name"
+          name="participant-name"
+          type="text"
+          placeholder="ex. Fraol Lemecha"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="participant-telegram-username">Your Telegram Username</label
+        >
+        <input
+          id="participant-telegram-username"
+          name="participant-telegram-username"
+          type="text"
+          placeholder="ex. frectonz"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="project-name">Project Name</label>
+        <input
+          id="project-name"
+          name="project-name"
+          type="text"
+          placeholder="ex. Lobste-rs"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="project-github">Project GitHub Link</label>
+        <input
+          id="project-github"
+          name="project-github"
+          type="text"
+          placeholder="ex. https://github.com/frectonz/lobste-rs"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="project-details">Project Details</label>
+        <textarea
+          id="project-details"
+          name="project-details"
+          rows="5"
+          placeholder="ex. A CLI client for lobste.rs written in Rust."
+          required></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Submit Form</button>
+      </div>
+    </form>
   </section>
+
+  <script src="../form.ts"></script>
 </Layout>

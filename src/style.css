@@ -2,10 +2,13 @@
   --green: #00FF57;
 }
 
+* {
+  font-family: 'Fira Code', monospace;
+}
+
 body {
   color: white;
   background-color: black;
-  font-family: 'Fira Code', monospace;
   width: 100%;
   max-width: 800px;
   margin: auto;
