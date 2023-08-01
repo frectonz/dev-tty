@@ -30,3 +30,16 @@ form button {
 
   cursor: pointer;
 }
+
+form button:disabled {
+  color: white;
+  background-color: black;
+  cursor: not-allowed;
+  border: 1px solid var(--green);
+}
+
+#status {
+  padding: 0.5rem;
+  display: none;
+  color: black;
+}

@@ -1,13 +1,18 @@
+import confeti from "canvas-confetti";
 import { supabase } from "./supabase";
 
 const form = document.querySelector("form")!;
+const status = document.querySelector("#status")! as HTMLParagraphElement;
+const submitBtn = document.querySelector("#submit-btn")! as HTMLButtonElement;
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(form);
 
+  submitBtn.textContent = "Submitting...";
+  submitBtn.disabled = true;
 
-  const { data, error, count, status, statusText } = await supabase
+  const { error } = await supabase
     .from('submissions')
     .insert(
       {
@@ -17,12 +22,21 @@ form.addEventListener("submit", async (e) => {
         project_github: formData.get("project-github"),
         project_details: formData.get("project-details"),
       },
-    )
-    .select();
+    );
 
-  console.log("data", data);
-  console.log("error", error);
-  console.log("count", count);
-  console.log("status", status);
-  console.log("statusText", statusText);
+  submitBtn.textContent = "Submit";
+  submitBtn.disabled = false;
+
+
+  status.style.display = "block";
+  if (error) {
+    status.textContent = "Something went wrong. Reload the page and try again.";
+    status.style.backgroundColor = "red";
+  } else {
+    confeti();
+    form.reset();
+
+    status.textContent = "Submitted successfully!";
+    status.style.backgroundColor = "var(--green)";
+  }
 });
