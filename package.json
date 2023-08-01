@@ -11,6 +11,11 @@
   },
   "dependencies": {
     "@loglib/tracker": "^0.4.3",
-    "astro": "^2.9.6"
+    "@supabase/supabase-js": "^2.31.0",
+    "astro": "^2.9.6",
+    "canvas-confetti": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.6.0"
   }
 }
