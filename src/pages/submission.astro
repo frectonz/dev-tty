@@ -1,76 +1,93 @@
 ---
-import "../form.css";
 import Layout from "../layouts/index.astro";
+
+const submissions = [
+  {
+    name: "Dagim Gizachew",
+    telegram: "aion_ue",
+    project_name: "CJX-CLI",
+    github: "https://github.com/dagimg-dot/cjx-cli-tool",
+    language: "Python",
+    details: "This is cjx cli. It can be used to setup your JavaFX development environment using VS Code as your IDE."
+  },
+  {
+    name: "Dechasa Teshome",
+    telegram: "Twhd_O",
+    project_name: "ThisManyLines",
+    github: "https://github.com/Dechie/ThisManyLines",
+    language: "Rust",
+    details: "A tool that analyzes how many lines of code you have written. It analyses your whole disk or a specific project, if it's the whole disk, it gives the option to choose language."
+  },
+  {
+    name: "Omer Abdulaziz",
+    telegram: "jugg3d",
+    project_name: "amica",
+    github: "https://github.com/omer-biz/amica",
+    language: "Rust",
+    details: "A CLI proxy which uses lua to manipulate requests and response as they hit the server and client respectively."
+  },
+  {
+    name: "Besufikad Micheal",
+    telegram: "Itachiinthesky",
+    project_name: "templatez",
+    github: "https://github.com/Besufikad17/Templatez",
+    language: "Python",
+    details: "A CLI tool for template and boilerplate management."
+  },
+  {
+    name: "Mikiyas Tibebu",
+    telegram: "bes0king",
+    project_name: "utils-cli",
+    github: "https://github.com/miki-tebe/utils-cli",
+    language: "JavaScript",
+    details: "Buch of utilities written in js"
+  },
+  {
+    name: "Kidus Feleke",
+    telegram: "wizkiye",
+    project_name: "Mereja",
+    github: "https://github.com/wizkiye/mereja",
+    language: "Python",
+    details: "Mereja is a versatile Python application that provides both a Command-Line Interface (CLI) and a Text-based User Interface (TUI). The app allows users to access and display various data, including the latest news, jobs, forex data, trending products for marketplaces, and telebirr transaction details. Additionally, it provides a search functionality for finding jobs, news articles, and marketplace products, making it a one-stop solution for information retrieval."
+  },
+  {
+    name: "Yohannes Tezera",
+    telegram: "yohan_nes",
+    project_name: "Pikslate",
+    github: "https://github.com/YohannesTz/Pikslate",
+    language: "Kotlin",
+    details: "Simple cli app that pixelates and draws a given image on the terminal."
+  },
+  {
+    name: "Nahom Tensaebirhan",
+    telegram: "Phgoat",
+    project_name: "pickME",
+    github: "https://github.com/oddegen/pickMe",
+    language: "C++",
+    details: "A Windows terminal color picker.",
+  },
+  {
+    name: "Niftalem Yeneneh",
+    telegram: "NYDEV0",
+    project_name: "TeleCrawler",
+    github: "https://github.com/NYDEV0/TeleCrawler",
+    language: "Python",
+    details: "A TUI app that lets you retrieve telegram messages and download any files including restricted files using Bot token and Message URL.",
+  }
+];
 ---
 
 <Layout title="/dev/tty - Project Submission">
-  <section>
-    <h1>Submit your Project</h1>
-    <form>
-      <p id="status" class="hidden"></p>
+  <h1>Submissions</h1>
 
-      <div>
-        <label for="participant-name">Your Name</label>
-        <input
-          autofocus
-          id="participant-name"
-          name="participant-name"
-          type="text"
-          placeholder="ex. Fraol Lemecha"
-          required
-        />
-      </div>
-
-      <div>
-        <label for="participant-telegram-username">Your Telegram Username</label
-        >
-        <input
-          id="participant-telegram-username"
-          name="participant-telegram-username"
-          type="text"
-          placeholder="ex. frectonz"
-          required
-        />
-      </div>
-
-      <div>
-        <label for="project-name">Project Name</label>
-        <input
-          id="project-name"
-          name="project-name"
-          type="text"
-          placeholder="ex. Lobste-rs"
-          required
-        />
-      </div>
-
-      <div>
-        <label for="project-github">Project GitHub Link</label>
-        <input
-          id="project-github"
-          name="project-github"
-          type="text"
-          placeholder="ex. https://github.com/frectonz/lobste-rs"
-          required
-        />
-      </div>
-
-      <div>
-        <label for="project-details">Project Details</label>
-        <textarea
-          id="project-details"
-          name="project-details"
-          rows="5"
-          placeholder="ex. A CLI client for lobste.rs written in Rust."
-          required></textarea>
-      </div>
-
-      <div>
-        <button id="submit-btn" type="submit">Submit</button>
-      </div>
-    </form>
-  </section>
-
-  <!-- Deactivate the form -->
-  <!-- <script src="../form.ts"></script> -->
+  {submissions.map((s, i) => (
+    <section>
+      <h1>
+        #{i + 1}
+        <a class="link" href={s.github}>{s.project_name}</a> by <a class="link" href={`https://t.me/${s.telegram}`}>{s.name}</a>
+        <span class="language">{s.language}</span>
+      </h1>
+      <p>{s.details}</p>
+    </section>
+  ))}
 </Layout>

@@ -47,7 +47,15 @@ li {
   margin: 10px 0;
 }
 
-section a {
+section a,
+.link {
   color: var(--green);
   text-decoration: underline var(--green);
+}
+
+.language {
+  background-color: var(--green);
+  color: black;
+  font-size: 0.7rem;
+  padding: 2px 5px;
 }
