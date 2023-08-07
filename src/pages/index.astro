@@ -1,8 +1,46 @@
 ---
 import Layout from "../layouts/index.astro";
+
+const winners = [
+  {
+    project: "Mereja",
+    github: "https://github.com/wizkiye/mereja",
+    name: "Kidus Feleke",
+    telegram: "wizkiye",
+    prize: 2000
+  },
+  {
+    project: "Amica",
+    github: "https://github.com/omer-biz/amica",
+    name: "Omer Abdulaziz",
+    telegram: "jugg3d",
+    prize: 2000
+  },
+  {
+    project: "Pikslate",
+    github: "https://github.com/YohannesTz/Pikslate",
+    name: "Yohannes Tezera",
+    telegram: "yohan_nes",
+    prize: 2000
+  }
+];
 ---
 
 <Layout title="/dev/tty">
+  <section>
+    <h1>Winners of the competition</h1>
+
+    <ol>
+      {winners.map(w => (
+        <li>
+          <a href={w.github}>{w.project}</a> by 
+          <a href={`https://t.me/${w.telegram}`}>{w.name}</a> wins 
+          <span>{w.prize} ETB</span>
+        </li>
+      ))}
+    </ol>
+  </section>
+
   <section>
     <h1>Submissions are now closed!</h1>
     <a href="/submission">Checkout the projects</a>
